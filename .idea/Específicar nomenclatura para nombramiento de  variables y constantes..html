@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomenclatura para Variables y Constantes</title>
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --accent-color: #4fc3a1;
+            --dark-color: #324a5f;
+            --light-color: #f9f9f9;
+            --warning-color: #ff7e67;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .image-container {
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .code-example {
+            background-color: #f0f8ff;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+
+        .good {
+            border-left: 4px solid #4CAF50;
+        }
+
+        .bad {
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .tips {
+            background-color: rgba(74, 111, 165, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .tips h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tip {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip h3 span {
+            background-color: var(--accent-color);
+            color: white;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .languages {
+            margin-bottom: 3rem;
+        }
+
+        .languages h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .warning-section {
+            background-color: rgba(255, 126, 103, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .warning-section h2 {
+            color: var(--warning-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .warning-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .warning-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .warning-icon {
+            color: var(--warning-color);
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-container,
+            .warning-container {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Nomenclatura para Variables y Constantes</h1>
+    <p>Una guía completa sobre cómo nombrar correctamente variables y constantes en programación</p>
+</header>
+
+<div class="container">
+    <section class="intro">
+        <h2>¿Por qué es importante la nomenclatura?</h2>
+        <p>Un buen código no solo debe funcionar correctamente sino que también debe ser legible y mantenible. La forma en que nombramos nuestras variables y constantes afecta directamente la legibilidad del código y la facilidad con la que otros desarrolladores (¡o tú mismo en el futuro!) pueden entenderlo.</p>
+    </section>
+
+    <section class="card-container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Camel Case</h3>
+            </div>
+            <div class="card-body">
+                <div class="image-container">
+                    <img src="/api/placeholder/300/180" alt="Ejemplo de Camel Case">
+                </div>
+                <p>La primera palabra comienza con minúscula y cada palabra siguiente comienza con mayúscula. No hay espacios ni guiones.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    let nombreUsuario = "Juan";<br>
+                    let edadUsuario = 25;<br>
+                    let contadorClics = 0;
+                </div>
+                <p>Usado comúnmente en JavaScript, Java, TypeScript y muchos otros lenguajes para variables y funciones.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Pascal Case</h3>
+            </div>
+            <div class="card-body">
+                <div class="image-container">
+                    <img src="/api/placeholder/300/180" alt="Ejemplo de Pascal Case">
+                </div>
+                <p>Cada palabra comienza con mayúscula, incluyendo la primera. No hay espacios ni guiones.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    class UsuarioAdmin { }<br>
+                    interface ProductoDetalle { }<br>
+                    function CalcularTotal() { }
+                </div>
+                <p>Usado generalmente para clases, interfaces y a veces para funciones en C#, TypeScript y otros lenguajes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Snake Case</h3>
+            </div>
+            <div class="card-body">
+                <div class="image-container">
+                    <img src="/api/placeholder/300/180" alt="Ejemplo de Snake Case">
+                </div>
+                <p>Todas las palabras en minúsculas, separadas por guiones bajos.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    let nombre_usuario = "María";<br>
+                    const max_intentos = 3;<br>
+                    function calcular_total() { }
+                </div>
+                <p>Popular en Python, Ruby, y archivos de configuración. También se usa para constantes en algunos lenguajes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Kebab Case</h3>
+            </div>
+            <div class="card-body">
+                <div class="image-container">
+                    <img src="/api/placeholder/300/180" alt="Ejemplo de Kebab Case">
+                </div>
+                <p>Todas las palabras en minúsculas, separadas por guiones.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    // En CSS<br>
+                    .user-profile { }<br>
+                    .nav-item { }<br>
+                    // En archivos: user-settings.js
+                </div>
+                <p>Común en URLs, nombres de archivos, CSS y HTML.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips">
+        <h2>Consejos para nombrar Variables y Constantes</h2>
+        <div class="tips-container">
+            <div class="tip">
+                <h3><span>1</span> Sé Descriptivo</h3>
+                <p>Los nombres deben indicar claramente qué contiene la variable.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    let precioTotal = 299.99;
+                </div>
+                <div class="code-example bad">
+                    // Mal<br>
+                    let p = 299.99;
+                </div>
+            </div>
+
+            <div class="tip">
+                <h3><span>2</span> Constantes en Mayúsculas</h3>
+                <p>Las constantes suelen nombrarse en mayúsculas con guiones bajos.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    const MAX_USUARIOS = 100;<br>
+                    const API_KEY = "abc123";
+                </div>
+            </div>
+
+            <div class="tip">
+                <h3><span>3</span> Evita Abreviaturas Ambiguas</h3>
+                <p>Las abreviaturas pueden causar confusión. Sé explícito siempre que puedas.</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    let cantidadDeElementos = 5;
+                </div>
+                <div class="code-example bad">
+                    // Mal<br>
+                    let cantElem = 5;
+                </div>
+            </div>
+
+            <div class="tip">
+                <h3><span>4</span> Consistencia</h3>
+                <p>Mantén un estilo de nomenclatura consistente en todo tu código.</p>
+                <div class="code-example bad">
+                    // Inconsistente (¡evitar!)<br>
+                    let nombreUsuario = "Ana";<br>
+                    let edad_usuario = 28;<br>
+                    let UserEmail = "ana@ejemplo.com";
+                </div>
+            </div>
+
+            <div class="tip">
+                <h3><span>5</span> Prefijos para Tipos</h3>
+                <p>Algunos desarrolladores usan prefijos para indicar el tipo de variable.</p>
+                <div class="code-example good">
+                    // Ejemplo en algunos estilos<br>
+                    let strNombre = "Pedro"; // string<br>
+                    let intEdad = 30; // integer<br>
+                    let arrColores = ["rojo", "azul"]; // array
+                </div>
+            </div>
+
+            <div class="tip">
+                <h3><span>6</span> Booleanos con Prefijo</h3>
+                <p>Para variables booleanas, usa prefijos como "is", "has", "can".</p>
+                <div class="code-example good">
+                    // Bien<br>
+                    let isActivo = true;<br>
+                    let hasPermiso = false;<br>
+                    let canEditar = true;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="languages">
+        <h2>Convenciones por Lenguaje</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Lenguaje</th>
+                <th>Variables</th>
+                <th>Constantes</th>
+                <th>Clases</th>
+                <th>Funciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>JavaScript</td>
+                <td>camelCase</td>
+                <td>UPPER_SNAKE_CASE</td>
+                <td>PascalCase</td>
+                <td>camelCase</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>snake_case</td>
+                <td>UPPER_SNAKE_CASE</td>
+                <td>PascalCase</td>
+                <td>snake_case</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>camelCase</td>
+                <td>UPPER_SNAKE_CASE</td>
+                <td>PascalCase</td>
+                <td>camelCase</td>
+            </tr>
+            <tr>
+                <td>C#</td>
+                <td>camelCase / _camelCase</td>
+                <td>PascalCase</td>
+                <td>PascalCase</td>
+                <td>PascalCase</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>$camelCase</td>
+                <td>UPPER_SNAKE_CASE</td>
+                <td>PascalCase</td>
+                <td>camelCase</td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td>snake_case</td>
+                <td>UPPER_SNAKE_CASE</td>
+                <td>PascalCase</td>
+                <td>snake_case</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="warning-section">
+        <h2>Errores Comunes a Evitar</h2>
+        <div class="warning-container">
+            <div class="warning-item">
+                <div class="warning-icon">⚠️</div>
+                <div>
+                    <h3>Nombres Demasiado Genéricos</h3>
+                    <p>Evita nombres como "data", "temp", "value" sin contexto adicional.</p>
+                </div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">⚠️</div>
+                <div>
+                    <h3>Nombres Demasiado Largos</h3>
+                    <p>Aunque descriptivos, nombres excesivamente largos dificultan la lectura.</p>
+                </div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">⚠️</div>
+                <div>
+                    <h3>Usar Números en Nombres</h3>
+                    <p>Evita nombres como "usuario1", "usuario2". Usa arrays o estructuras apropiadas.</p>
+                </div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">⚠️</div>
+                <div>
+                    <h3>Nombres que Causan Confusión</h3>
+                    <p>Evita nombres como "l" (letra L) o "O" (letra O) que pueden confundirse con "1" y "0".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Ejemplo Completo</h3>
+            </div>
+            <div class="card-body">
+                <p>A continuación se muestra un ejemplo de código con buenas prácticas de nomenclatura:</p>
+                <div class="code-example good">
+                    // Constantes<br>
+                    const MAX_INTENTOS_LOGIN = 3;<br>
+                    const API_URL = "https://api.ejemplo.com";<br><br>
+
+                    // Clases<br>
+                    class UsuarioAdmin {<br>
+                    &nbsp;&nbsp;constructor(nombre, email) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;// Variables de instancia<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.nombreCompleto = nombre;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.emailUsuario = email;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.isActivo = true;<br>
+                    &nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;// Métodos<br>
+                    &nbsp;&nbsp;obtenerDatosUsuario() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nombre: this.nombreCompleto,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email: this.emailUsuario<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+                    &nbsp;&nbsp;}<br>
+                    }<br><br>
+
+                    // Función<br>
+                    function calcularPrecioTotal(precioBase, impuestosPorcentaje) {<br>
+                    &nbsp;&nbsp;const factorImpuesto = 1 + (impuestosPorcentaje / 100);<br>
+                    &nbsp;&nbsp;return precioBase * factorImpuesto;<br>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 2025 Guía de Nomenclatura para Programadores | Creado como un recurso educativo</p>
+</footer>
+</body>
+</html>
