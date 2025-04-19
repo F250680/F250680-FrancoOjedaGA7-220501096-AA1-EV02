@@ -1,10 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estándares de Codificación - Franco Fernando Ojeda Insuasty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .logo {
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #004d99;
+            margin: 1.5rem 0 1rem 0;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #004d99;
+            margin: 1rem 0;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .data-label {
+            font-weight: bold;
+        }
+
+        .criteria {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-left: 4px solid #004d99;
+            margin-bottom: 1rem;
+        }
+
+        .checklist {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        .checklist th, .checklist td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .checklist th {
+            background-color: #004d99;
+            color: white;
+        }
+
+        .checklist tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .standard-section {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .code-example {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            margin: 1rem 0;
+        }
+
+        .example {
+            color: #a6e22e;
+        }
+
+        .comment {
+            color: #75715e;
+        }
+
+        footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <h1>Estándares de Codificación</h1>
+    <p>Evidencia de Desempeño GA7-220501096-AA1-EV02</p>
+</header>
 
+<div class="container">
+    <div class="student-info">
+        <h2>Información del Aprendiz</h2>
+        <p><strong>Nombre:</strong> Franco Fernando Ojeda Insuasty</p>
+        <p><strong>Fecha:</strong> 19 de abril de 2025</p>
+    </div>
+
+    <section>
+        <h2>1. Datos Generales</h2>
+        <div class="data-grid">
+            <div class="data-label">Programa de formación:</div>
+            <div>Análisis y desarrollo de software</div>
+
+            <div class="data-label">Proyecto formativo:</div>
+            <div>Construcción de software integrador de tecnologías orientadas a servicios</div>
+
+            <div class="data-label">Fase proyecto:</div>
+            <div>Ejecución</div>
+
+            <div class="data-label">Resultado de aprendizaje:</div>
+            <div>220501096-01 Planear actividades de construcción del software de acuerdo con el diseño establecido</div>
+
+            <div class="data-label">Actividad de aprendizaje:</div>
+            <div>GA7-220501096-AA1- Configurar herramientas de versionamiento para control de código</div>
+
+            <div class="data-label">Evidencia de desempeño:</div>
+            <div>Definir estándares de codificación de acuerdo a plataforma de desarrollo elegida GA7-220501096-AA1-EV02</div>
+        </div>
+
+        <h3>Criterios de evaluación</h3>
+        <div class="criteria">
+            <ul>
+                <li>Interpreta el informe de diseño para definir el plan de trabajo en la construcción del software.</li>
+                <li>Selecciona y configura herramientas de desarrollo de acuerdo con las condiciones del software a construir.</li>
+                <li>Define estándares de codificación de acuerdo con las reglas de la plataforma de desarrollo seleccionada.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Lista de Chequeo</h2>
+        <table class="checklist">
+            <thead>
+            <tr>
+                <th>No.</th>
+                <th>Variables/Indicadores de Logro</th>
+                <th>Porcentaje</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Incluye en el informe Estándares de codificación según lenguaje seleccionado.</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Específica nomenclatura para nombramiento de variables y constantes.</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Específica nomenclatura para nombramientos de clases, métodos, comentarios.</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Presenta el informe cumpliendo con las normas básicas de presentación de documentos.</td>
+                <td>10%</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>3. Estándares de Codificación - JavaScript</h2>
+
+        <div class="standard-section">
+            <h3>3.1 Nomenclatura para Variables y Constantes</h3>
+            <p>Los estándares de nomenclatura son esenciales para mantener un código legible y mantenible. A continuación, se detallan las convenciones para variables y constantes:</p>
+
+            <h4>Variables</h4>
+            <ul>
+                <li>Utilizar camelCase para nombres de variables</li>
+                <li>Los nombres deben ser descriptivos y en inglés</li>
+                <li>Evitar nombres de una sola letra excepto en bucles o contextos específicos</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="comment">// Correcto</span><br>
+                let <span class="example">userName</span> = 'Franco';<br>
+                let <span class="example">totalAmount</span> = 150.75;<br>
+                <br>
+                <span class="comment">// Incorrecto</span><br>
+                let <span class="example">u</span> = 'Franco';<br>
+                let <span class="example">tamount</span> = 150.75;
+            </div>
+
+            <h4>Constantes</h4>
+            <ul>
+                <li>Utilizar UPPERCASE con guiones bajos para constantes globales</li>
+                <li>Utilizar camelCase para constantes locales</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="comment">// Constantes globales</span><br>
+                const <span class="example">MAX_USERS</span> = 100;<br>
+                const <span class="example">API_BASE_URL</span> = 'https://api.example.com';<br>
+                <br>
+                <span class="comment">// Constantes locales</span><br>
+                function calculateArea() {<br>
+                &nbsp;&nbsp;const <span class="example">circleRadius</span> = 5;<br>
+                &nbsp;&nbsp;return Math.PI * circleRadius * circleRadius;<br>
+                }
+            </div>
+        </div>
+
+        <div class="standard-section">
+            <h3>3.2 Nomenclatura para Clases, Métodos y Comentarios</h3>
+
+            <h4>Clases</h4>
+            <ul>
+                <li>Utilizar PascalCase para nombres de clases</li>
+                <li>Los nombres deben ser sustantivos que describan la entidad</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="comment">// Correcto</span><br>
+                class <span class="example">UserProfile</span> {<br>
+                &nbsp;&nbsp;// Propiedades y métodos<br>
+                }<br>
+                <br>
+                class <span class="example">DatabaseConnection</span> {<br>
+                &nbsp;&nbsp;// Propiedades y métodos<br>
+                }
+            </div>
+
+            <h4>Métodos y Funciones</h4>
+            <ul>
+                <li>Utilizar camelCase para nombres de métodos y funciones</li>
+                <li>Los nombres deben comenzar con un verbo que describa la acción</li>
+                <li>Mantener funciones cortas y enfocadas en una sola responsabilidad</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="comment">// Correcto</span><br>
+                function <span class="example">calculateTotal</span>(items) {<br>
+                &nbsp;&nbsp;// Código<br>
+                }<br>
+                <br>
+                class ShoppingCart {<br>
+                &nbsp;&nbsp;<span class="example">addItem</span>(item) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Código<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;<br>
+                &nbsp;&nbsp;<span class="example">removeItem</span>(itemId) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Código<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+
+            <h4>Comentarios</h4>
+            <ul>
+                <li>Usar comentarios para explicar el "por qué", no el "qué"</li>
+                <li>Documentar todas las funciones con JSDoc</li>
+                <li>Mantener comentarios actualizados cuando el código cambie</li>
+            </ul>
+
+            <div class="code-example">
+                    <span class="comment">/**<br>
+                    * Calcula el precio total incluyendo impuestos<br>
+                    * @param {number} basePrice - El precio base sin impuestos<br>
+                    * @param {number} taxRate - La tasa de impuesto (por ejemplo, 0.19 para 19%)<br>
+                    * @returns {number} El precio total con impuestos<br>
+                    */</span><br>
+                function calculateTotalPrice(basePrice, taxRate) {<br>
+                &nbsp;&nbsp;<span class="comment">// Validamos que los parámetros sean números positivos</span><br>
+                &nbsp;&nbsp;if (basePrice < 0 || taxRate < 0) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;throw new Error('Los valores deben ser positivos');<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;<br>
+                &nbsp;&nbsp;return basePrice * (1 + taxRate);<br>
+                }
+            </div>
+        </div>
+
+        <div class="standard-section">
+            <h3>3.3 Estructura y Formato del Código</h3>
+
+            <h4>Indentación y Espaciado</h4>
+            <ul>
+                <li>Utilizar 2 espacios para la indentación</li>
+                <li>Añadir espacio después de palabras clave y antes de llaves</li>
+                <li>Añadir espacio alrededor de operadores</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="comment">// Correcto</span><br>
+                if (condition) {<br>
+                &nbsp;&nbsp;doSomething();<br>
+                } else {<br>
+                &nbsp;&nbsp;doSomethingElse();<br>
+                }<br>
+                <br>
+                const sum = a + b;
+            </div>
+
+            <h4>Organización de archivos</h4>
+            <ul>
+                <li>Un componente o clase por archivo</li>
+                <li>Importaciones agrupadas y ordenadas: primero librerías externas, luego componentes internos</li>
+                <li>Exportar al final del archivo</li>
+            </ul>
+
+            <div class="code-example">
+                <span class="comment">// Importaciones externas</span><br>
+                import React from 'react';<br>
+                import { connect } from 'react-redux';<br>
+                <br>
+                <span class="comment">// Importaciones internas</span><br>
+                import { Button } from '../components/Button';<br>
+                import { formatDate } from '../utils/dateHelpers';<br>
+                <br>
+                <span class="comment">// Definición de componente/clase</span><br>
+                class UserDashboard extends React.Component {<br>
+                &nbsp;&nbsp;// código del componente<br>
+                }<br>
+                <br>
+                <span class="comment">// Exportación</span><br>
+                export default connect(mapStateToProps)(UserDashboard);
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Presentado por: Franco Fernando Ojeda Insuasty</p>
+    <p>Análisis y Desarrollo de Software - 2025</p>
+</footer>
 </body>
 </html>
